@@ -17,8 +17,14 @@
             "status" => false
         ];
         
-        
         $list[] = $newTask;
+        file_put_contents('todo-list.json', json_encode($list));
+    }
+
+    if(isset($_POST['indexDelate'])){
+        $index = $_POST['indexDelate'];
+        array_splice($list, $index, 1);
+
         file_put_contents('todo-list.json', json_encode($list));
     }
 

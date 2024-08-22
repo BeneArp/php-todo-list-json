@@ -19,7 +19,7 @@ createApp({
             })
         },
 
-        addTask() {
+        addTask(){
             const data = {
                 "text": this.userTask,
             };
@@ -27,13 +27,28 @@ createApp({
             axios.post(this.apiUrl, data, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             })
-                .then(response => {
-                    console.log(response.data);
-                    this.toDo = response.data;
-                });
+            .then(response => {
+                console.log(response.data);
+                this.toDo = response.data;
+            });
 
             this.userTask = '';
         },
+
+        removeTask(index){
+            // console.log(index);
+            const data = {
+                "indexDelate" : index
+            }
+
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            })
+            .then(response => {
+                console.log(response.data);
+                this.toDo = response.data;
+            });
+        }
     },
 
     mounted(){

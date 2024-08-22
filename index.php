@@ -38,7 +38,7 @@
                             </div>
                             
                             <div class="col-auto">
-                                <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                <button class="btn btn-danger" @click="removeTask(index)"><i class="fa-solid fa-trash"></i></button>
                             </div>
                             
                         </li>
