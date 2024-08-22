@@ -25,36 +25,43 @@
 
     <div class="container">
         <div class="container-md text-center mt-5">
-            <h1>Todo List</h1>
 
-            <div class="ms-container">
-                <ul>
-                    <li class="row flex-nowrap justify-content-between gx-0">
-                        <div class="col-auto">
-                            <span>Ciao</span>
-                        </div>
-                        
-                        <div class="col-auto">
-                            <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-                        </div>
-                        
-                    </li>
+            <div id="app">
 
-                    <li class="row flex-nowrap justify-content-between gx-0">
-                        <div class="col-auto">
-                            <span>Ciao</span>
-                        </div>
-                        
-                        <div class="col-auto">
-                            <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-                        </div>
-                        
-                    </li>
-                    
-                </ul>
+                <h1>{{title}}</h1>
+
+                <div class="ms-container">
+                    <ul>
+                        <li class="row flex-nowrap justify-content-between gx-0">
+                            <div class="col-auto">
+                                <span>Ciao</span>
+                            </div>
+                            
+                            <div class="col-auto">
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                            
+                        </li>
+
+                        <li class="row flex-nowrap justify-content-between gx-0">
+                            <div class="col-auto">
+                                <span>Ciao</span>
+                            </div>
+                            
+                            <div class="col-auto">
+                                <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                            </div>
+                            
+                        </li>
+
+                    </ul>
+                </div>
+
             </div>
+           
         </div>
     </div>
     
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
