@@ -33,6 +33,8 @@ createApp({
             });
 
             this.userTask = '';
+
+            this.getApi();
         },
 
         removeTask(index){
@@ -48,6 +50,24 @@ createApp({
                 console.log(response.data);
                 this.toDo = response.data;
             });
+
+            this.getApi();
+        },
+
+        changeStatus(index){
+            const data = {
+                "indexToChange": index
+            }
+
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            })
+            .then(response => {
+                console.log(response.data);
+                this.toDo = response.data;
+            });
+
+            this.getApi();
         }
     },
 

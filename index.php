@@ -34,7 +34,7 @@
                     <ul>
                         <li v-for="(task, index) in list" class="row flex-nowrap justify-content-between gx-0">
                             <div class="col-auto" :class="task.status ? 'done' : '' ">
-                                <span>{{task.text}}</span>
+                                <span @click="changeStatus(index)">{{task.text}}</span>
                             </div>
                             
                             <div class="col-auto">
