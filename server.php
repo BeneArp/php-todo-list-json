@@ -11,10 +11,5 @@
     // var_dump($list);
 
 
-    // // restituisco il json manipolato
-    // header('Content-Type: application/json');
-    // echo json_encode($list);
-
     header('Content-Type: application/json');
-    $listEncode = json_encode($list);
-    var_dump($listEncode);
+    echo json_encode($list);

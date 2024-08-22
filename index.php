@@ -32,20 +32,9 @@
 
                 <div class="ms-container">
                     <ul>
-                        <li class="row flex-nowrap justify-content-between gx-0">
-                            <div class="col-auto">
-                                <span>Ciao</span>
-                            </div>
-                            
-                            <div class="col-auto">
-                                <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-                            </div>
-                            
-                        </li>
-
-                        <li class="row flex-nowrap justify-content-between gx-0">
-                            <div class="col-auto">
-                                <span>Ciao</span>
+                        <li v-for="(task, index) in list" class="row flex-nowrap justify-content-between gx-0">
+                            <div class="col-auto" :class="task.status ? 'done' : '' ">
+                                <span>{{task.text}}</span>
                             </div>
                             
                             <div class="col-auto">

@@ -31,3 +31,7 @@ h1{
     margin: 1.5em auto;
     background-color: lightgrey;
 }
+
+.done{
+    text-decoration: line-through;
+}
