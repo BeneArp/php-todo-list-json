@@ -1,0 +1,13 @@
+[
+    {
+        "text": "Fare qualcosa",
+        "status": false,
+        "description": "Mi raccomando fai qualcosa"
+    },
+
+    {
+        "text": "Fare qualcos'altro",
+        "status": false,
+        "description": "Mi raccomando fai qualcos'altro"
+    }
+]
