@@ -7,6 +7,7 @@ createApp({
             title: 'Todo List',
             apiUrl: 'server.php',
             list: [],
+            userTask: '',
         }
     },
 
@@ -16,7 +17,23 @@ createApp({
                 this.list = response.data;
                 console.log(this.list);
             })
-        }
+        },
+
+        addTask() {
+            const data = {
+                "text": this.userTask,
+            };
+
+            axios.post(this.apiUrl, data, {
+                headers: { 'Content-Type': 'multipart/form-data' }
+            })
+                .then(response => {
+                    console.log(response.data);
+                    this.toDo = response.data;
+                });
+
+            this.userTask = '';
+        },
     },
 
     mounted(){

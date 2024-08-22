@@ -10,6 +10,19 @@
 
     // var_dump($list);
 
+    if(isset($_POST['text'])){
+
+        $newTask = [
+            "text" => $_POST['text'],
+            "status" => false
+        ];
+        
+        
+        $list[] = $newTask;
+        file_put_contents('todo-list.json', json_encode($list));
+    }
+
+    
 
     header('Content-Type: application/json');
     echo json_encode($list);

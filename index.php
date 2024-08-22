@@ -44,6 +44,11 @@
                         </li>
 
                     </ul>
+
+                    <div class="input-group mb-3 mt-3">
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" v-model="userTask" @keyup.enter="addTask">
+                        <span class="input-group-text" id="inputGroup-sizing-default" @click="addTask">Inserisci</span>
+                    </div>
                 </div>
 
             </div>
